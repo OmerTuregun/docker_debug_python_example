@@ -1,0 +1,10 @@
+version: '3'
+services:
+  monitor:
+    build: .
+    container_name: cpu_ram_monitor
+    ports:
+      - "5678:5678"  # VS Code debug portu
+    volumes:
+      - .:/app  # Dosyaların senkronize edilmesi için
+    tty: true
